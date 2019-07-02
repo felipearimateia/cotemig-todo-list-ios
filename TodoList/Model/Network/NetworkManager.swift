@@ -13,8 +13,6 @@ public class NetworkManager {
     private let host: String
     private let scheme: String
     
-    private let defaultHeaders = ["Accept": "application-json; charset=utf-8", "Content-Type": "application-json; charset=utf-8"]
-    
     public init(host: String = "api.fluo.site", scheme: String = "https") {
         self.host = host
         self.scheme = scheme
