@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8976100622A5EB0900094F57 /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8976100522A5EB0900094F57 /* Rubik-Medium.ttf */; };
+		8976100822A5EB1300094F57 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8976100722A5EB1300094F57 /* OpenSans-Regular.ttf */; };
 		899D0D262294C1240042D26E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899D0D252294C1240042D26E /* AppDelegate.swift */; };
 		899D0D282294C1240042D26E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899D0D272294C1240042D26E /* ViewController.swift */; };
 		899D0D2B2294C1240042D26E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 899D0D292294C1240042D26E /* Main.storyboard */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8976100522A5EB0900094F57 /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Rubik-Medium.ttf"; path = "../../../../../Downloads/rubik/Rubik-Medium.ttf"; sourceTree = "<group>"; };
+		8976100722A5EB1300094F57 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Regular.ttf"; path = "../../../../../Downloads/open-sans/OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		899D0D222294C1240042D26E /* TodoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		899D0D252294C1240042D26E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		899D0D272294C1240042D26E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +78,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8976100422A5EAEE00094F57 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				8976100722A5EB1300094F57 /* OpenSans-Regular.ttf */,
+				8976100522A5EB0900094F57 /* Rubik-Medium.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
 		899D0D192294C1240042D26E = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +110,7 @@
 		899D0D242294C1240042D26E /* TodoList */ = {
 			isa = PBXGroup;
 			children = (
+				8976100422A5EAEE00094F57 /* fonts */,
 				899D0D252294C1240042D26E /* AppDelegate.swift */,
 				899D0D272294C1240042D26E /* ViewController.swift */,
 				899D0D292294C1240042D26E /* Main.storyboard */,
@@ -229,9 +243,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8976100822A5EB1300094F57 /* OpenSans-Regular.ttf in Resources */,
 				899D0D302294C1250042D26E /* LaunchScreen.storyboard in Resources */,
 				899D0D2D2294C1250042D26E /* Assets.xcassets in Resources */,
 				899D0D2B2294C1240042D26E /* Main.storyboard in Resources */,
+				8976100622A5EB0900094F57 /* Rubik-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
