@@ -16,13 +16,15 @@ class UserRepository {
         self.userApi = userApi
     }
     
-    func login(email: String, password: String) {
+    func login(email: String, password: String, callback: @escaping (Bool) -> Void) {
         userApi.login(email: email, password: password) { (result) in
             switch result {
             case .success(let user):
                 self.saveToken(token: user.token)
+                callback(true)
                 print(user)
             case .failure(let error):
+                callback(false)
                 print(error.localizedDescription)
             }
         }

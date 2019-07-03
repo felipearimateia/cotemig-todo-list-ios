@@ -115,6 +115,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="15"/>
                                 <state key="normal" title="Log In"/>
+                                <connections>
+                                    <action selector="clickLogin:" destination="5Mj-aN-aX0" eventType="touchUpInside" id="ua9-cr-4gC"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-mail" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xO4-S8-hka">
                                 <rect key="frame" x="20" y="338" width="335" height="40"/>
@@ -163,6 +166,7 @@
                     </view>
                     <connections>
                         <outlet property="textFieldEmail" destination="xO4-S8-hka" id="XZJ-wN-Szh"/>
+                        <outlet property="textFieldPassword" destination="Oun-ve-Sd0" id="Igc-dU-FO6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0rV-H5-CTm" userLabel="First Responder" sceneMemberID="firstResponder"/>
