@@ -31,9 +31,13 @@ class LoginViewController: UIViewController {
         
         if let email = textEmail, let password = textPassword {
             userRepository.login(email: email, password: password) { (resutl) in
-                
                 if (resutl) {
                     print("sucesso")
+                    
+                    if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "tabBar") {
+                        self.present(viewController, animated: true, completion: nil)
+                    }
+                    
                 } else {
                     print("error")
                 }

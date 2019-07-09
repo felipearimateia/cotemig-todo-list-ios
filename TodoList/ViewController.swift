@@ -11,8 +11,6 @@ import UIKit
 class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        let repository = UserRepository.factory()
-        repository.login(email: "mob-felipe@cotemig.com.br", password: "cotemig012")
     }
 }
 
