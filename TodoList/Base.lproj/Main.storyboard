@@ -266,6 +266,7 @@ Today you have no tasks</string>
                             <constraint firstItem="gVN-Ol-Zcf" firstAttribute="top" secondItem="3O4-iQ-hPv" secondAttribute="top" constant="-30" id="7Ng-yw-lSF"/>
                             <constraint firstItem="Qxh-j5-UEm" firstAttribute="leading" secondItem="kAC-rc-4wR" secondAttribute="leading" id="8IL-nw-sr8"/>
                             <constraint firstItem="Xx5-2V-P3Y" firstAttribute="top" secondItem="Qxh-j5-UEm" secondAttribute="bottom" id="Gxf-o1-CHn"/>
+                            <constraint firstItem="ndC-xr-ye9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Etg-w8-q5z" secondAttribute="trailing" constant="8" symbolic="YES" id="Hj4-q8-qCc"/>
                             <constraint firstItem="3O4-iQ-hPv" firstAttribute="trailing" secondItem="kAC-rc-4wR" secondAttribute="trailing" id="IiY-jo-98c"/>
                             <constraint firstItem="kAC-rc-4wR" firstAttribute="trailing" secondItem="ndC-xr-ye9" secondAttribute="trailing" constant="18" id="J3O-Za-tsF"/>
                             <constraint firstItem="Etg-w8-q5z" firstAttribute="bottom" secondItem="Qxh-j5-UEm" secondAttribute="bottom" constant="-17" id="UDL-Dx-OJB"/>
