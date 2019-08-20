@@ -34,5 +34,12 @@ class HomeViewController: UIViewController, UITabBarDelegate {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    @IBAction func openNewTask(_ sender: Any) {
+        if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "newTask") {
+            viewController.modalPresentationStyle = .overCurrentContext
+            self.present(viewController, animated: true, completion: nil)
+        }
+    }
+    
 }

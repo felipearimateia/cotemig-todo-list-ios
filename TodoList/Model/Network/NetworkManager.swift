@@ -38,7 +38,7 @@ public class NetworkManager {
         headers: [String: String] = [:],
         completion: @escaping (Result<T, Error>)->Void
     ) {
-        self.request(.get, path: path, encoding: JSONEncoding.default, headers: headers, queryItems: queryItems)
+        self.request(.get, path: path, encoding: URLEncoding.default, headers: headers, queryItems: queryItems)
             .responseDecodable (decoder: JSONDecoder()){ (response: DataResponse<T>) in
                 debugPrint(response)
                 completion(response.result)
@@ -69,7 +69,9 @@ public class NetworkManager {
         urlComponents.scheme = self.scheme
         urlComponents.host = self.host
         urlComponents.path = path
-        urlComponents.setQueryItems(with: queryItems)
+        if (queryItems.count > 0) {
+            urlComponents.setQueryItems(with: queryItems)
+        }
         return try? urlComponents.asURL()
     }
     

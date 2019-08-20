@@ -13,9 +13,17 @@ class TodosViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var tableView: UITableView!
     
     let cellReuseIdentifier = "todo_cell"
+    let taskRepository = TaskRepository.factory()
+    var tasks: Array<TaskResponse> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        taskRepository.getTasksByProject("4d8kbl18bisli1dcn1to4e") { (tasks, success) in
+            if let items = tasks {
+                self.tasks = items
+                self.tableView?.reloadData()
+            }
+        }
     }
     
     // MARK: - UITableViewDataSource
@@ -25,7 +33,7 @@ class TodosViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 10
+        return tasks.count
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -39,13 +47,16 @@ class TodosViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath) as! TodoTableViewCell
+        let task = tasks[indexPath.section]
         
         // add border and color
         cell.backgroundColor = UIColor.white
         cell.layer.borderWidth = 0
         cell.layer.cornerRadius = 8
         cell.clipsToBounds = true
+        
+        cell.lblTitle.text = task.description
         
         return cell
     }
