@@ -326,7 +326,7 @@ Today you have no tasks</string>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.12941176470588234" green="0.12549019607843137" blue="0.12549019607843137" alpha="0.23999999999999999" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Nsz-qn-7ux" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6aU-gO-gBO" secondAttribute="top" constant="81" id="96a-4V-bhv"/>
                             <constraint firstItem="PYs-F3-Pb2" firstAttribute="centerX" secondItem="sX3-XB-DBh" secondAttribute="centerX" id="XkW-gC-N3U"/>

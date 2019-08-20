@@ -13,7 +13,7 @@ class NewTaskViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .clear
+//        view.backgroundColor = .clear
         view.isOpaque = true
     }
     
