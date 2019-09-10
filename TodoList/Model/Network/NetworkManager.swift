@@ -32,6 +32,19 @@ public class NetworkManager {
         }
     }
     
+    public func postEmptyBody(
+        path: String,
+        parameters: [String: Any] = [:],
+        headers: [String: String] = [:],
+        queryItems: [String: String] = [:],
+        completion: @escaping (Result<Data?, Error>) -> Void
+        ) {
+        self.request(.post, path: path, encoding: JSONEncoding.default, parameters: parameters, headers: headers, queryItems: queryItems)
+            .response { (response) in
+                completion(response.result)
+        }
+    }
+    
     public func get<T:Decodable>(
         path: String,
         queryItems: [String: String] = [:],

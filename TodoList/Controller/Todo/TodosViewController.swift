@@ -12,16 +12,22 @@ class TodosViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     @IBOutlet weak var tableView: UITableView!
     
+    private let taskRepository = TaskRepository.factory()
+    private let userRepository = UserRepository.factory()
+    
     let cellReuseIdentifier = "todo_cell"
-    let taskRepository = TaskRepository.factory()
     var tasks: Array<TaskResponse> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        taskRepository.getTasksByProject("4d8kbl18bisli1dcn1to4e") { (tasks, success) in
-            if let items = tasks {
-                self.tasks = items
-                self.tableView?.reloadData()
+        getTasks()
+    }
+    
+    func getTasks() {
+        taskRepository.getUserTasks(token: userRepository.getToken()!) { result in
+            if result.count > 0 {
+                self.tasks = result
+                self.tableView.reloadData()
             }
         }
     }

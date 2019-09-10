@@ -11,6 +11,9 @@
 		6787A52891ADFBF7C49D4549 /* Pods_TodoListTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E367C85BBB03E59E51397F3F /* Pods_TodoListTests.framework */; };
 		89384DF623159CCD001AE817 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 89384DF523159CCD001AE817 /* Rubik-Regular.ttf */; };
 		894591B5230C4C2E005EFE38 /* NewTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894591B4230C4C2E005EFE38 /* NewTaskViewController.swift */; };
+		897D7C5923271F6D007CDAA7 /* ProjectApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897D7C5823271F6D007CDAA7 /* ProjectApi.swift */; };
+		897D7C5B23271FFF007CDAA7 /* ProjectResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897D7C5A23271FFF007CDAA7 /* ProjectResponse.swift */; };
+		897D7C5D23272061007CDAA7 /* ProjectRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897D7C5C23272061007CDAA7 /* ProjectRepository.swift */; };
 		897DFE7422F8F67E00BAA9C9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897DFE7322F8F67E00BAA9C9 /* HomeViewController.swift */; };
 		897DFE7822F90ECF00BAA9C9 /* TodoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897DFE7722F90ECF00BAA9C9 /* TodoTableViewCell.swift */; };
 		897DFE7B22F910B600BAA9C9 /* TodosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897DFE7A22F910B600BAA9C9 /* TodosViewController.swift */; };
@@ -29,6 +32,7 @@
 		89E6F787230C98B900D16EEA /* TaskResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E6F786230C98B900D16EEA /* TaskResponse.swift */; };
 		89E6F789230C98C500D16EEA /* TaskRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E6F788230C98C400D16EEA /* TaskRepository.swift */; };
 		89E6F78B230C98CD00D16EEA /* TaskApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E6F78A230C98CD00D16EEA /* TaskApi.swift */; };
+		89EC5E0623283CF400DB976C /* ProjectsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EC5E0523283CF400DB976C /* ProjectsCollectionViewCell.swift */; };
 		89F8C46522CAE45500E4865B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F8C46422CAE45500E4865B /* NetworkManager.swift */; };
 		89F8C46722CAE96500E4865B /* URLComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F8C46622CAE96500E4865B /* URLComponents.swift */; };
 		89F8C46A22CAF22000E4865B /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F8C46922CAF22000E4865B /* UserRepository.swift */; };
@@ -61,6 +65,9 @@
 		86C98B8BA3DBD45611ECCF20 /* Pods-TodoList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoList.release.xcconfig"; path = "Target Support Files/Pods-TodoList/Pods-TodoList.release.xcconfig"; sourceTree = "<group>"; };
 		89384DF523159CCD001AE817 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
 		894591B4230C4C2E005EFE38 /* NewTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskViewController.swift; sourceTree = "<group>"; };
+		897D7C5823271F6D007CDAA7 /* ProjectApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectApi.swift; sourceTree = "<group>"; };
+		897D7C5A23271FFF007CDAA7 /* ProjectResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectResponse.swift; sourceTree = "<group>"; };
+		897D7C5C23272061007CDAA7 /* ProjectRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectRepository.swift; sourceTree = "<group>"; };
 		897DFE7322F8F67E00BAA9C9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		897DFE7722F90ECF00BAA9C9 /* TodoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTableViewCell.swift; sourceTree = "<group>"; };
 		897DFE7A22F910B600BAA9C9 /* TodosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodosViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +92,7 @@
 		89E6F786230C98B900D16EEA /* TaskResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskResponse.swift; sourceTree = "<group>"; };
 		89E6F788230C98C400D16EEA /* TaskRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskRepository.swift; sourceTree = "<group>"; };
 		89E6F78A230C98CD00D16EEA /* TaskApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskApi.swift; sourceTree = "<group>"; };
+		89EC5E0523283CF400DB976C /* ProjectsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsCollectionViewCell.swift; sourceTree = "<group>"; };
 		89F8C46422CAE45500E4865B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		89F8C46622CAE96500E4865B /* URLComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLComponents.swift; sourceTree = "<group>"; };
 		89F8C46922CAF22000E4865B /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
@@ -152,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				894591B4230C4C2E005EFE38 /* NewTaskViewController.swift */,
+				89EC5E0523283CF400DB976C /* ProjectsCollectionViewCell.swift */,
 			);
 			path = NewTask;
 			sourceTree = "<group>";
@@ -274,6 +283,7 @@
 			children = (
 				89E6F788230C98C400D16EEA /* TaskRepository.swift */,
 				89F8C46922CAF22000E4865B /* UserRepository.swift */,
+				897D7C5C23272061007CDAA7 /* ProjectRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -283,6 +293,7 @@
 			children = (
 				89E6F78A230C98CD00D16EEA /* TaskApi.swift */,
 				89F8C46D22CAF2E800E4865B /* UserApi.swift */,
+				897D7C5823271F6D007CDAA7 /* ProjectApi.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -303,6 +314,7 @@
 			children = (
 				89E6F786230C98B900D16EEA /* TaskResponse.swift */,
 				89F8C47022CAF50900E4865B /* LoginResponse.swift */,
+				897D7C5A23271FFF007CDAA7 /* ProjectResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -535,6 +547,7 @@
 				899D0D282294C1240042D26E /* ViewController.swift in Sources */,
 				89E6F789230C98C500D16EEA /* TaskRepository.swift in Sources */,
 				89D16F1822CC05E30092FC6C /* ViewUtils.swift in Sources */,
+				897D7C5923271F6D007CDAA7 /* ProjectApi.swift in Sources */,
 				89E6F78B230C98CD00D16EEA /* TaskApi.swift in Sources */,
 				89D16F1F22CC26C70092FC6C /* CadastroViewController.swift in Sources */,
 				899D0D262294C1240042D26E /* AppDelegate.swift in Sources */,
@@ -543,10 +556,13 @@
 				89D16F1622CC03A90092FC6C /* LoginViewController.swift in Sources */,
 				897DFE7822F90ECF00BAA9C9 /* TodoTableViewCell.swift in Sources */,
 				894591B5230C4C2E005EFE38 /* NewTaskViewController.swift in Sources */,
+				897D7C5D23272061007CDAA7 /* ProjectRepository.swift in Sources */,
+				89EC5E0623283CF400DB976C /* ProjectsCollectionViewCell.swift in Sources */,
 				897DFE7422F8F67E00BAA9C9 /* HomeViewController.swift in Sources */,
 				89F8C46A22CAF22000E4865B /* UserRepository.swift in Sources */,
 				89F8C46722CAE96500E4865B /* URLComponents.swift in Sources */,
 				897DFE7B22F910B600BAA9C9 /* TodosViewController.swift in Sources */,
+				897D7C5B23271FFF007CDAA7 /* ProjectResponse.swift in Sources */,
 				89F8C47122CAF50900E4865B /* LoginResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

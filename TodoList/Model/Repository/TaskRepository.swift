@@ -34,6 +34,17 @@ class TaskRepository {
         }
     }
     
+    func getUserTasks(token: String, completion: @escaping ([TaskResponse]) -> Void) {
+        taskApi.getUserTasks(token: token) { (result) in
+            switch result {
+            case .success(let tasks):
+                completion(tasks)
+            case .failure:
+                completion([])
+            }
+        }
+    }
+    
     static func factory() -> TaskRepository {
         let network = NetworkManager()
         let api = TaskApi(network: network)

@@ -29,24 +29,24 @@ class LoginViewController: UIViewController {
         let textEmail = textFieldEmail?.text
         let textPassword = textFieldPassword?.text
         
-        if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "tabBar") {
-            self.present(viewController, animated: true, completion: nil)
-        }
-        
-//        if let email = textEmail, let password = textPassword {
-//            userRepository.login(email: email, password: password) { (resutl) in
-//                if (resutl) {
-//                    print("sucesso")
-//
-//                    if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "tabBar") {
-//                        self.present(viewController, animated: true, completion: nil)
-//                    }
-//
-//                } else {
-//                    print("error")
-//                }
-//            }
+//        if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "tabBar") {
+//            self.present(viewController, animated: true, completion: nil)
 //        }
+        
+        if let email = textEmail, let password = textPassword {
+            userRepository.login(email: email, password: password) { (resutl) in
+                if (resutl) {
+                    print("sucesso")
+
+                    if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "tabBar") {
+                        self.present(viewController, animated: true, completion: nil)
+                    }
+
+                } else {
+                    print("error")
+                }
+            }
+        }
     }
     
 }
