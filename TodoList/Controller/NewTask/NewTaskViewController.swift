@@ -13,11 +13,12 @@ class NewTaskViewController: UIViewController, UICollectionViewDelegate, UIColle
     private let userRepository = UserRepository.factory()
     private let taskRepository = TaskRepository.factory()
     private let projectRepository = ProjectRepository.factory()
-
+    
     @IBOutlet weak var textFieldTask: UITextField!
     @IBOutlet weak var collectionView: UICollectionView!
     
     var projects: Array<ProjectResponse> = []
+    private var projectSelected: Int? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,20 +39,20 @@ class NewTaskViewController: UIViewController, UICollectionViewDelegate, UIColle
         self.dismiss(animated: true, completion: nil)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
     @IBAction func saveTask(_ sender: Any) {
+        if let indexProject = projectSelected {
+            let project = projects[indexProject]
+            let task = textFieldTask.text
+            
+            //TODO salvar task
+            
+        } else {
+            //TODO mostrar mensagem para selecionar o projeto
+        }
     }
     
-    // MARK: - UICO
+    // MARK: - UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return projects.count
@@ -61,6 +62,18 @@ class NewTaskViewController: UIViewController, UICollectionViewDelegate, UIColle
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell_project", for: indexPath) as! ProjectsCollectionViewCell
         let project = projects[indexPath.row]
         cell.bind(project: project)
+        
+        if indexPath.row == projectSelected {
+            cell.backgroundColor = .blue
+        } else {
+            cell.backgroundColor = .clear
+        }
+        
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        projectSelected = indexPath.row
+        collectionView.reloadData()
     }
 }

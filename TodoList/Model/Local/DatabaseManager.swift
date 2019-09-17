@@ -29,7 +29,7 @@ public class DatabaseManager {
     }
     
     private func createTable() {
-        let tasks = Table(TABLE_TASKS)
+        let tasks = getTasks()
         let id = Expression<String>("id")
         let idProject = Expression<String>("idProject")
 //        let idStatus = Expression<Int>("idStatus")
@@ -59,6 +59,10 @@ public class DatabaseManager {
 //            t.column(deliveredAt)
 //            t.column(priority)
         })
+    }
+    
+    public func getTasks() -> Table {
+        return Table(DatabaseManager.TABLE_TASKS)
     }
 }
 

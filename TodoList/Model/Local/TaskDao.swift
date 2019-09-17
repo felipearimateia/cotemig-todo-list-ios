@@ -24,6 +24,8 @@ public class TaskDao {
     }
     
     func getTasks() {
-        
+        for task in try! database.db.prepare(database.getTasks()) {
+            
+        }
     }
 }
