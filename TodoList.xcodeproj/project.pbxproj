@@ -24,6 +24,8 @@
 		899D0D302294C1250042D26E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 899D0D2E2294C1250042D26E /* LaunchScreen.storyboard */; };
 		899D0D3B2294C1250042D26E /* TodoListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899D0D3A2294C1250042D26E /* TodoListTests.swift */; };
 		899D0D462294C1250042D26E /* TodoListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899D0D452294C1250042D26E /* TodoListUITests.swift */; };
+		89A6D93D23301E2A003CEBAB /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A6D93C23301E2A003CEBAB /* DatabaseManager.swift */; };
+		89A6D93F23302EE0003CEBAB /* TaskDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A6D93E23302EE0003CEBAB /* TaskDao.swift */; };
 		89D16F1622CC03A90092FC6C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D16F1522CC03A90092FC6C /* LoginViewController.swift */; };
 		89D16F1822CC05E30092FC6C /* ViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D16F1722CC05E30092FC6C /* ViewUtils.swift */; };
 		89D16F1B22CC1F760092FC6C /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 89D16F1922CC1F760092FC6C /* OpenSans-Regular.ttf */; };
@@ -84,6 +86,8 @@
 		899D0D412294C1250042D26E /* TodoListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		899D0D452294C1250042D26E /* TodoListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListUITests.swift; sourceTree = "<group>"; };
 		899D0D472294C1250042D26E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89A6D93C23301E2A003CEBAB /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		89A6D93E23302EE0003CEBAB /* TaskDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDao.swift; sourceTree = "<group>"; };
 		89D16F1522CC03A90092FC6C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		89D16F1722CC05E30092FC6C /* ViewUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUtils.swift; sourceTree = "<group>"; };
 		89D16F1922CC1F760092FC6C /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
@@ -249,6 +253,15 @@
 			path = TodoListUITests;
 			sourceTree = "<group>";
 		};
+		89A6D93B23301E14003CEBAB /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				89A6D93C23301E2A003CEBAB /* DatabaseManager.swift */,
+				89A6D93E23302EE0003CEBAB /* TaskDao.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
 		89D16F1422CC038B0092FC6C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -301,6 +314,7 @@
 		89F8C46C22CAF2BE00E4865B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				89A6D93B23301E14003CEBAB /* Local */,
 				89F8C46F22CAF45800E4865B /* Response */,
 				89F8C46322CAE42C00E4865B /* Network */,
 				89F8C46822CAF1FA00E4865B /* Repository */,
@@ -546,6 +560,7 @@
 				89F8C46522CAE45500E4865B /* NetworkManager.swift in Sources */,
 				899D0D282294C1240042D26E /* ViewController.swift in Sources */,
 				89E6F789230C98C500D16EEA /* TaskRepository.swift in Sources */,
+				89A6D93F23302EE0003CEBAB /* TaskDao.swift in Sources */,
 				89D16F1822CC05E30092FC6C /* ViewUtils.swift in Sources */,
 				897D7C5923271F6D007CDAA7 /* ProjectApi.swift in Sources */,
 				89E6F78B230C98CD00D16EEA /* TaskApi.swift in Sources */,
@@ -559,6 +574,7 @@
 				897D7C5D23272061007CDAA7 /* ProjectRepository.swift in Sources */,
 				89EC5E0623283CF400DB976C /* ProjectsCollectionViewCell.swift in Sources */,
 				897DFE7422F8F67E00BAA9C9 /* HomeViewController.swift in Sources */,
+				89A6D93D23301E2A003CEBAB /* DatabaseManager.swift in Sources */,
 				89F8C46A22CAF22000E4865B /* UserRepository.swift in Sources */,
 				89F8C46722CAE96500E4865B /* URLComponents.swift in Sources */,
 				897DFE7B22F910B600BAA9C9 /* TodosViewController.swift in Sources */,

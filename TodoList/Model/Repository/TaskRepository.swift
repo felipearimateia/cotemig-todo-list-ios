@@ -7,14 +7,17 @@
 //
 
 import Foundation
+import SQLite
 
 class TaskRepository {
     private let taskApi: TaskApi
     private let userRepository: UserRepository
+    private let taskDao: TaskDao
     
-    private init(_ taskApi: TaskApi) {
+    private init(_ taskApi: TaskApi, taskDao: TaskDao) {
         self.taskApi = taskApi
         self.userRepository = UserRepository.factory()
+        self.taskDao = taskDao
     }
     
     func getTasksByProject(_ idProject: String, callback:@escaping (Array<TaskResponse>?, Bool) -> Void) {
@@ -38,6 +41,7 @@ class TaskRepository {
         taskApi.getUserTasks(token: token) { (result) in
             switch result {
             case .success(let tasks):
+                self.taskDao.saveTasks(tasks: tasks)
                 completion(tasks)
             case .failure:
                 completion([])
@@ -48,6 +52,7 @@ class TaskRepository {
     static func factory() -> TaskRepository {
         let network = NetworkManager()
         let api = TaskApi(network: network)
-        return TaskRepository(api)
+        let dao = TaskDao(DatabaseManager())
+        return TaskRepository(api, taskDao: dao)
     }
 }
