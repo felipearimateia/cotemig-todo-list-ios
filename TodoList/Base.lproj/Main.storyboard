@@ -33,7 +33,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="QVG-DR-YF9">
-                                <rect key="frame" x="179.5" y="72" width="16" height="16"/>
+                                <rect key="frame" x="97.5" y="72" width="180.5" height="195"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="899-Xs-QGL">
                                 <rect key="frame" x="58.5" y="544" width="258" height="56"/>
@@ -503,14 +503,8 @@ Today you have no tasks</string>
                                             <constraint firstAttribute="height" constant="1" id="oNz-r7-Vd5"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4I8-xr-FVR">
-                                        <rect key="frame" x="22" y="238" width="74.5" height="15.5"/>
-                                        <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="13"/>
-                                        <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowDown" translatesAutoresizingMaskIntoConstraints="NO" id="1J0-zY-il8">
-                                        <rect key="frame" x="166.5" y="242" width="14" height="8"/>
+                                        <rect key="frame" x="171" y="242" width="14" height="8"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="14" id="Kz4-si-DZa"/>
                                             <constraint firstAttribute="height" constant="8" id="gr2-CV-SgP"/>
@@ -529,13 +523,19 @@ Today you have no tasks</string>
                                             <action selector="saveTask:" destination="j3W-6h-uyz" eventType="touchUpInside" id="TlO-KG-co7"/>
                                         </connections>
                                     </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Choose date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4mE-gu-vri">
+                                        <rect key="frame" x="22" y="238" width="79" height="16"/>
+                                        <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="beginChooseDate:" destination="j3W-6h-uyz" eventType="editingDidBegin" id="LUt-kA-gzX"/>
+                                        </connections>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="9kp-Dr-xXm" firstAttribute="top" secondItem="JW5-1i-h8F" secondAttribute="bottom" id="3pT-Kv-s9D"/>
-                                    <constraint firstItem="4I8-xr-FVR" firstAttribute="leading" secondItem="fgV-Jk-a7F" secondAttribute="leading" constant="22" id="7ht-iS-eYb"/>
-                                    <constraint firstItem="4I8-xr-FVR" firstAttribute="top" secondItem="fIc-u4-4cf" secondAttribute="bottom" constant="43" id="AB0-7I-Gw5"/>
-                                    <constraint firstItem="1J0-zY-il8" firstAttribute="centerY" secondItem="4I8-xr-FVR" secondAttribute="centerY" id="FG0-2R-XLZ"/>
                                     <constraint firstItem="ihY-b3-GYp" firstAttribute="leading" secondItem="fgV-Jk-a7F" secondAttribute="leading" constant="22" id="HK5-7Z-K7R"/>
                                     <constraint firstAttribute="height" priority="999" constant="566" id="J8J-w9-Sh7"/>
                                     <constraint firstItem="1GA-BD-Fyz" firstAttribute="top" secondItem="fgV-Jk-a7F" secondAttribute="top" constant="44" id="K1q-Jh-dTG"/>
@@ -547,7 +547,9 @@ Today you have no tasks</string>
                                     <constraint firstItem="cJT-OW-9B1" firstAttribute="top" secondItem="1GA-BD-Fyz" secondAttribute="bottom" constant="9" id="Wlr-Fr-q5b"/>
                                     <constraint firstItem="cJT-OW-9B1" firstAttribute="leading" secondItem="fgV-Jk-a7F" secondAttribute="leading" constant="22" id="Ys7-BO-tE6"/>
                                     <constraint firstAttribute="trailing" secondItem="9kp-Dr-xXm" secondAttribute="trailing" constant="22" id="bDe-zG-jYy"/>
+                                    <constraint firstItem="4mE-gu-vri" firstAttribute="leading" secondItem="fgV-Jk-a7F" secondAttribute="leading" constant="22" id="d9w-ls-5nM"/>
                                     <constraint firstAttribute="trailing" secondItem="2yk-zf-87d" secondAttribute="trailing" id="dM4-Nc-Tpu"/>
+                                    <constraint firstItem="4mE-gu-vri" firstAttribute="top" secondItem="fIc-u4-4cf" secondAttribute="bottom" constant="43" id="dee-xo-efa"/>
                                     <constraint firstAttribute="trailing" secondItem="ihY-b3-GYp" secondAttribute="trailing" constant="22" id="fhP-Ro-XpT"/>
                                     <constraint firstItem="2yk-zf-87d" firstAttribute="height" secondItem="fgV-Jk-a7F" secondAttribute="height" id="glf-Xi-Whw"/>
                                     <constraint firstAttribute="trailing" secondItem="fIc-u4-4cf" secondAttribute="trailing" constant="22" id="h6q-yr-de1"/>
@@ -557,9 +559,10 @@ Today you have no tasks</string>
                                     <constraint firstItem="cJT-OW-9B1" firstAttribute="centerX" secondItem="fgV-Jk-a7F" secondAttribute="centerX" id="pJ4-ac-lqo"/>
                                     <constraint firstAttribute="trailing" secondItem="cJT-OW-9B1" secondAttribute="trailing" constant="22" id="pMk-Aw-bp3"/>
                                     <constraint firstItem="2yk-zf-87d" firstAttribute="top" secondItem="fgV-Jk-a7F" secondAttribute="top" id="pkd-7H-Ixg"/>
-                                    <constraint firstItem="1J0-zY-il8" firstAttribute="leading" secondItem="4I8-xr-FVR" secondAttribute="trailing" constant="70" id="psy-c8-onj"/>
                                     <constraint firstItem="1GA-BD-Fyz" firstAttribute="centerX" secondItem="fgV-Jk-a7F" secondAttribute="centerX" id="qa3-RX-dc2"/>
+                                    <constraint firstItem="4mE-gu-vri" firstAttribute="centerY" secondItem="1J0-zY-il8" secondAttribute="centerY" id="uBw-mH-3d0"/>
                                     <constraint firstItem="fIc-u4-4cf" firstAttribute="leading" secondItem="fgV-Jk-a7F" secondAttribute="leading" constant="22" id="uRP-4l-aDR"/>
+                                    <constraint firstItem="1J0-zY-il8" firstAttribute="leading" secondItem="4mE-gu-vri" secondAttribute="trailing" constant="70" id="vWv-FO-s20"/>
                                     <constraint firstItem="ihY-b3-GYp" firstAttribute="top" secondItem="2yk-zf-87d" secondAttribute="top" constant="331" id="z9D-rW-QP1"/>
                                 </constraints>
                             </view>
