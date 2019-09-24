@@ -23,9 +23,21 @@ public class TaskDao {
         }
     }
     
-    func getTasks() {
+    func getTasks() -> [TaskResponse] {
+        var tasks = [TaskResponse]()
+        
         for task in try! database.db.prepare(database.getTasks()) {
+            let id = task[TasksTable.id]
+            let idProject = task[TasksTable.idProject]
+            let idAccountTo = task[TasksTable.idAccountTo]
+            let name = task[TasksTable.name]
+            let description = task[TasksTable.description]
+            let tags = task[TasksTable.tags]
             
+            let item = TaskResponse(id: id, name: name, idProject: idProject, idAccountTo: idAccountTo, description: description, tags: tags)
+            tasks.append(item)
         }
+        
+        return tasks
     }
 }

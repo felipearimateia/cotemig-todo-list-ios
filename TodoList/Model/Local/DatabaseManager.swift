@@ -24,40 +24,26 @@ public class DatabaseManager {
         )
         
         db = try! Connection("\(path)/db.sqlite3")
-        
         createTable()
     }
     
     private func createTable() {
         let tasks = getTasks()
-        let id = Expression<String>("id")
-        let idProject = Expression<String>("idProject")
-//        let idStatus = Expression<Int>("idStatus")
-//        let idAccountFrom = Expression<String>("idAccountFrom")
-        let idAccountTo = Expression<String>("idAccountTo")
-        let name = Expression<String>("name")
-        let description = Expression<String>("description")
-        let tags = Expression<String>("tags")
-//        let estimate = Expression<String>("estimate")
-//        let createdAt = Expression<Int64>("createdAt")
-//        let startedAt = Expression<Int64?>("startedAt")
-//        let deliveredAt = Expression<Int64?>("deliveredAt")
-//        let priority = Expression<Int64>("priority")
         
         try! db .run(tasks.create(ifNotExists: true) {t in
-            t.column(id, primaryKey: true)
-            t.column(idProject)
-//            t.column(idStatus)
-//            t.column(idAccountFrom)
-            t.column(idAccountTo)
-            t.column(name)
-            t.column(description)
-            t.column(tags)
-//            t.column(estimate)
-//            t.column(createdAt)
-//            t.column(startedAt)
-//            t.column(deliveredAt)
-//            t.column(priority)
+            t.column(TasksTable.id, primaryKey: true)
+            t.column(TasksTable.idProject)
+//            t.column(TasksTable.idStatus)
+//            t.column(TasksTable.idAccountFrom)
+            t.column(TasksTable.idAccountTo)
+            t.column(TasksTable.name)
+            t.column(TasksTable.description)
+            t.column(TasksTable.tags)
+//            t.column(TasksTable.estimate)
+//            t.column(TasksTable.createdAt)
+//            t.column(TasksTable.startedAt)
+//            t.column(TasksTable.deliveredAt)
+//            t.column(TasksTable.priority)
         })
     }
     

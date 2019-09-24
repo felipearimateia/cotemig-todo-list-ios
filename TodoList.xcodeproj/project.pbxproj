@@ -41,6 +41,8 @@
 		89F8C46E22CAF2E800E4865B /* UserApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F8C46D22CAF2E800E4865B /* UserApi.swift */; };
 		89F8C47122CAF50900E4865B /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F8C47022CAF50900E4865B /* LoginResponse.swift */; };
 		8C4C3D146FAB41F47AB09C86 /* Pods_TodoListUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F123F3EB4A43C7C680DB861 /* Pods_TodoListUITests.framework */; };
+		DC1C671A233ABA3A007C80DE /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1C6719233ABA3A007C80DE /* Connectivity.swift */; };
+		DC1C671D233ABF55007C80DE /* TasksTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1C671C233ABF55007C80DE /* TasksTable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +107,8 @@
 		9B04A917B2101CF6A6E73B9A /* Pods-TodoListUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoListUITests.release.xcconfig"; path = "Target Support Files/Pods-TodoListUITests/Pods-TodoListUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BF2E8E99112E0C26F923019B /* Pods-TodoListUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoListUITests.debug.xcconfig"; path = "Target Support Files/Pods-TodoListUITests/Pods-TodoListUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D024654BF030109F97BE9515 /* Pods-TodoListTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoListTests.debug.xcconfig"; path = "Target Support Files/Pods-TodoListTests/Pods-TodoListTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DC1C6719233ABA3A007C80DE /* Connectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
+		DC1C671C233ABF55007C80DE /* TasksTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTable.swift; sourceTree = "<group>"; };
 		E367C85BBB03E59E51397F3F /* Pods_TodoListTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodoListTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBE45E6B9575629437C2453B /* Pods-TodoList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoList.debug.xcconfig"; path = "Target Support Files/Pods-TodoList/Pods-TodoList.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -221,7 +225,7 @@
 		899D0D242294C1240042D26E /* TodoList */ = {
 			isa = PBXGroup;
 			children = (
-				89D16F1D22CC26990092FC6C /* New Group */,
+				DC1C6718233ABA16007C80DE /* Infrastructure */,
 				89D16F1422CC038B0092FC6C /* Controller */,
 				89F8C46C22CAF2BE00E4865B /* Model */,
 				8976100422A5EAEE00094F57 /* fonts */,
@@ -256,6 +260,7 @@
 		89A6D93B23301E14003CEBAB /* Local */ = {
 			isa = PBXGroup;
 			children = (
+				DC1C671B233ABF41007C80DE /* Tables */,
 				89A6D93C23301E2A003CEBAB /* DatabaseManager.swift */,
 				89A6D93E23302EE0003CEBAB /* TaskDao.swift */,
 			);
@@ -273,13 +278,6 @@
 				89D16F1E22CC26C70092FC6C /* CadastroViewController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		89D16F1D22CC26990092FC6C /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		89F8C46322CAE42C00E4865B /* Network */ = {
@@ -331,6 +329,22 @@
 				897D7C5A23271FFF007CDAA7 /* ProjectResponse.swift */,
 			);
 			path = Response;
+			sourceTree = "<group>";
+		};
+		DC1C6718233ABA16007C80DE /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				DC1C6719233ABA3A007C80DE /* Connectivity.swift */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		DC1C671B233ABF41007C80DE /* Tables */ = {
+			isa = PBXGroup;
+			children = (
+				DC1C671C233ABF55007C80DE /* TasksTable.swift */,
+			);
+			path = Tables;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -561,6 +575,7 @@
 				899D0D282294C1240042D26E /* ViewController.swift in Sources */,
 				89E6F789230C98C500D16EEA /* TaskRepository.swift in Sources */,
 				89A6D93F23302EE0003CEBAB /* TaskDao.swift in Sources */,
+				DC1C671D233ABF55007C80DE /* TasksTable.swift in Sources */,
 				89D16F1822CC05E30092FC6C /* ViewUtils.swift in Sources */,
 				897D7C5923271F6D007CDAA7 /* ProjectApi.swift in Sources */,
 				89E6F78B230C98CD00D16EEA /* TaskApi.swift in Sources */,
@@ -577,6 +592,7 @@
 				89A6D93D23301E2A003CEBAB /* DatabaseManager.swift in Sources */,
 				89F8C46A22CAF22000E4865B /* UserRepository.swift in Sources */,
 				89F8C46722CAE96500E4865B /* URLComponents.swift in Sources */,
+				DC1C671A233ABA3A007C80DE /* Connectivity.swift in Sources */,
 				897DFE7B22F910B600BAA9C9 /* TodosViewController.swift in Sources */,
 				897D7C5B23271FFF007CDAA7 /* ProjectResponse.swift in Sources */,
 				89F8C47122CAF50900E4865B /* LoginResponse.swift in Sources */,
