@@ -38,15 +38,26 @@ class TaskRepository {
     }
     
     func getUserTasks(token: String, completion: @escaping ([TaskResponse]) -> Void) {
-        taskApi.getUserTasks(token: token) { (result) in
-            switch result {
-            case .success(let tasks):
-                self.taskDao.saveTasks(tasks: tasks)
-                completion(tasks)
-            case .failure:
-                completion([])
+        
+        taskDao.getTasks()
+        
+        if Connectivity.isConnectedToInternet {
+            taskApi.getUserTasks(token: token) { (result) in
+                switch result {
+                case .success(let tasks):
+                    self.taskDao.saveTasks(tasks: tasks)
+                    completion(tasks)
+                case .failure:
+                    completion([])
+                }
             }
+        } else {
+            let tasks = taskDao.getTasks()
+            completion(tasks)
         }
+        
+        
+        
     }
     
     static func factory() -> TaskRepository {

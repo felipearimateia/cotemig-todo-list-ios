@@ -11,6 +11,7 @@ import SQLite
 
 public class DatabaseManager {
     public var db: Connection
+    
     static let TABLE_TASKS = "tasks"
     
     init() {
@@ -24,13 +25,14 @@ public class DatabaseManager {
         )
         
         db = try! Connection("\(path)/db.sqlite3")
+        db.ex
         createTable()
     }
     
     private func createTable() {
         let tasks = getTasks()
         
-        try! db .run(tasks.create(ifNotExists: true) {t in
+        try! db.run(tasks.create(ifNotExists: true) {t in
             t.column(TasksTable.id, primaryKey: true)
             t.column(TasksTable.idProject)
 //            t.column(TasksTable.idStatus)

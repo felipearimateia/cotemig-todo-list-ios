@@ -529,7 +529,7 @@ Today you have no tasks</string>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="13"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
-                                            <action selector="beginChooseDate:" destination="j3W-6h-uyz" eventType="editingDidBegin" id="LUt-kA-gzX"/>
+                                            <action selector="beginChooseDate:" destination="j3W-6h-uyz" eventType="editingDidEnd" id="3Cn-ql-lFx"/>
                                         </connections>
                                     </textField>
                                 </subviews>
@@ -587,6 +587,7 @@ Today you have no tasks</string>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="9kp-Dr-xXm" id="WRM-5c-c7F"/>
+                        <outlet property="textDate" destination="4mE-gu-vri" id="Vx5-Sw-ssO"/>
                         <outlet property="textFieldTask" destination="cJT-OW-9B1" id="kVa-Pk-MdO"/>
                     </connections>
                 </viewController>

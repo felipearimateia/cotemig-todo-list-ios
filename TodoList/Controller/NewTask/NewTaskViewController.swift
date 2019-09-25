@@ -16,6 +16,7 @@ class NewTaskViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     @IBOutlet weak var textFieldTask: UITextField!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var textDate: UITextField!
     
     var projects: Array<ProjectResponse> = []
     private var projectSelected: Int? = nil
@@ -41,7 +42,8 @@ class NewTaskViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     @IBAction func beginChooseDate(_ sender: UITextField) {
         let datePickerView:UIDatePicker = UIDatePicker()
-        datePickerView.datePickerMode = .date
+        datePickerView.datePickerMode = .dateAndTime
+        datePickerView.minimumDate = Date()
         datePickerView.locale = Locale.init(identifier: "pt_BR")
         sender.inputView = datePickerView
         datePickerView.addTarget(self, action: #selector(NewTaskViewController.datePickerValueChanged), for: .valueChanged)
@@ -49,8 +51,8 @@ class NewTaskViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     @objc func datePickerValueChanged(sender:UIDatePicker) {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .long
-//        dateTextField.text = dateFormatter.stringFromDate(sender.date)
+        dateFormatter.dateFormat = "dd/MM/yyy HH:mm"
+        textDate.text = dateFormatter.string(from: sender.date)
     }
     
     @IBAction func saveTask(_ sender: Any) {
