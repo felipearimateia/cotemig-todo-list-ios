@@ -17,6 +17,8 @@
 		897DFE7422F8F67E00BAA9C9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897DFE7322F8F67E00BAA9C9 /* HomeViewController.swift */; };
 		897DFE7822F90ECF00BAA9C9 /* TodoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897DFE7722F90ECF00BAA9C9 /* TodoTableViewCell.swift */; };
 		897DFE7B22F910B600BAA9C9 /* TodosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897DFE7A22F910B600BAA9C9 /* TodosViewController.swift */; };
+		8990D495234CAA4900824F31 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8990D494234CAA4900824F31 /* ImagePicker.swift */; };
+		8990D497234CBE8000824F31 /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8990D496234CBE8000824F31 /* CircleImageView.swift */; };
 		899D0D262294C1240042D26E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899D0D252294C1240042D26E /* AppDelegate.swift */; };
 		899D0D282294C1240042D26E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899D0D272294C1240042D26E /* ViewController.swift */; };
 		899D0D2B2294C1240042D26E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 899D0D292294C1240042D26E /* Main.storyboard */; };
@@ -75,6 +77,8 @@
 		897DFE7322F8F67E00BAA9C9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		897DFE7722F90ECF00BAA9C9 /* TodoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTableViewCell.swift; sourceTree = "<group>"; };
 		897DFE7A22F910B600BAA9C9 /* TodosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodosViewController.swift; sourceTree = "<group>"; };
+		8990D494234CAA4900824F31 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		8990D496234CBE8000824F31 /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
 		899D0D222294C1240042D26E /* TodoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		899D0D252294C1240042D26E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		899D0D272294C1240042D26E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -335,6 +339,8 @@
 			isa = PBXGroup;
 			children = (
 				DC1C6719233ABA3A007C80DE /* Connectivity.swift */,
+				8990D494234CAA4900824F31 /* ImagePicker.swift */,
+				8990D496234CBE8000824F31 /* CircleImageView.swift */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -584,6 +590,7 @@
 				89F8C46E22CAF2E800E4865B /* UserApi.swift in Sources */,
 				89E6F787230C98B900D16EEA /* TaskResponse.swift in Sources */,
 				89D16F1622CC03A90092FC6C /* LoginViewController.swift in Sources */,
+				8990D495234CAA4900824F31 /* ImagePicker.swift in Sources */,
 				897DFE7822F90ECF00BAA9C9 /* TodoTableViewCell.swift in Sources */,
 				894591B5230C4C2E005EFE38 /* NewTaskViewController.swift in Sources */,
 				897D7C5D23272061007CDAA7 /* ProjectRepository.swift in Sources */,
@@ -596,6 +603,7 @@
 				897DFE7B22F910B600BAA9C9 /* TodosViewController.swift in Sources */,
 				897D7C5B23271FFF007CDAA7 /* ProjectResponse.swift in Sources */,
 				89F8C47122CAF50900E4865B /* LoginResponse.swift in Sources */,
+				8990D497234CBE8000824F31 /* CircleImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

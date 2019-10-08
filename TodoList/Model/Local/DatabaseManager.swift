@@ -25,7 +25,6 @@ public class DatabaseManager {
         )
         
         db = try! Connection("\(path)/db.sqlite3")
-        db.ex
         createTable()
     }
     
