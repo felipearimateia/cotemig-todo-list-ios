@@ -91,7 +91,7 @@ DEPENDENCIES:
   - SQLite.swift (~> 0.12.0)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - Firebase
     - FirebaseAnalytics
@@ -131,4 +131,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 7368e91deb36462bc1f7f2b6c388a5104c491a90
 
-COCOAPODS: 1.7.3
+COCOAPODS: 1.8.1
