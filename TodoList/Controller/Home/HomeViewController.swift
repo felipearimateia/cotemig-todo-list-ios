@@ -42,4 +42,6 @@ class HomeViewController: UIViewController, UITabBarDelegate {
         }
     }
     
+    @IBAction func tapPhoto(_ sender: Any) {
+    }
 }

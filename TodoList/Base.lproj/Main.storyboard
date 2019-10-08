@@ -253,13 +253,17 @@
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" translatesAutoresizingMaskIntoConstraints="NO" id="ndC-xr-ye9">
                                 <rect key="frame" x="317" y="55" width="40" height="40"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="B13-XN-2i8"/>
                                     <constraint firstAttribute="height" constant="40" id="FMC-hS-jqA"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="y0i-rL-vKJ" appends="YES" id="gfb-bI-H2J"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Etg-w8-q5z">
-                                <rect key="frame" x="18" y="69" width="103" height="20"/>
+                                <rect key="frame" x="18" y="69" width="109.5" height="20"/>
                                 <string key="text">Hello Brenda!
 Today you have no tasks</string>
                                 <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
@@ -295,6 +299,11 @@ Today you have no tasks</string>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EEV-ax-kXj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="y0i-rL-vKJ">
+                    <connections>
+                        <action selector="tapPhoto:" destination="7Qk-vQ-DuT" id="HbB-Nh-prE"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2450.4000000000001" y="109.29535232383809"/>
         </scene>
@@ -419,7 +428,7 @@ Today you have no tasks</string>
                                 <rect key="frame" x="0.0" y="101" width="375" height="566"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="union1" translatesAutoresizingMaskIntoConstraints="NO" id="2yk-zf-87d">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="566"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="566.00000000000011"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add new task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1GA-BD-Fyz">
                                         <rect key="frame" x="146" y="44" width="83" height="16"/>
@@ -504,7 +513,7 @@ Today you have no tasks</string>
                                         </constraints>
                                     </view>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowDown" translatesAutoresizingMaskIntoConstraints="NO" id="1J0-zY-il8">
-                                        <rect key="frame" x="171" y="242" width="14" height="8"/>
+                                        <rect key="frame" x="172" y="242" width="14" height="8"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="14" id="Kz4-si-DZa"/>
                                             <constraint firstAttribute="height" constant="8" id="gr2-CV-SgP"/>
@@ -524,7 +533,7 @@ Today you have no tasks</string>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Choose date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4mE-gu-vri">
-                                        <rect key="frame" x="22" y="238" width="79" height="16"/>
+                                        <rect key="frame" x="22" y="238" width="80" height="16"/>
                                         <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="13"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -567,7 +576,7 @@ Today you have no tasks</string>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AXC-Pi-lqQ">
-                                <rect key="frame" x="179.5" y="69" width="16" height="22"/>
+                                <rect key="frame" x="147.5" y="69" width="80" height="80"/>
                                 <state key="normal" image="btnClose"/>
                                 <connections>
                                     <action selector="close:" destination="j3W-6h-uyz" eventType="touchUpInside" id="5Kz-xd-XrD"/>

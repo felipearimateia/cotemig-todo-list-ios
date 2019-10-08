@@ -43,6 +43,7 @@
 		8C4C3D146FAB41F47AB09C86 /* Pods_TodoListUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F123F3EB4A43C7C680DB861 /* Pods_TodoListUITests.framework */; };
 		DC1C671A233ABA3A007C80DE /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1C6719233ABA3A007C80DE /* Connectivity.swift */; };
 		DC1C671D233ABF55007C80DE /* TasksTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1C671C233ABF55007C80DE /* TasksTable.swift */; };
+		DC8FC77523440BB6003DBA2D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC8FC77423440BB6003DBA2D /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,7 @@
 		D024654BF030109F97BE9515 /* Pods-TodoListTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoListTests.debug.xcconfig"; path = "Target Support Files/Pods-TodoListTests/Pods-TodoListTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DC1C6719233ABA3A007C80DE /* Connectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
 		DC1C671C233ABF55007C80DE /* TasksTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTable.swift; sourceTree = "<group>"; };
+		DC8FC77423440BB6003DBA2D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E367C85BBB03E59E51397F3F /* Pods_TodoListTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodoListTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBE45E6B9575629437C2453B /* Pods-TodoList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoList.debug.xcconfig"; path = "Target Support Files/Pods-TodoList/Pods-TodoList.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -225,6 +227,7 @@
 		899D0D242294C1240042D26E /* TodoList */ = {
 			isa = PBXGroup;
 			children = (
+				DC8FC77423440BB6003DBA2D /* GoogleService-Info.plist */,
 				DC1C6718233ABA16007C80DE /* Infrastructure */,
 				89D16F1422CC038B0092FC6C /* Controller */,
 				89F8C46C22CAF2BE00E4865B /* Model */,
@@ -461,6 +464,7 @@
 				89D16F1B22CC1F760092FC6C /* OpenSans-Regular.ttf in Resources */,
 				899D0D2B2294C1240042D26E /* Main.storyboard in Resources */,
 				89D16F1C22CC1F760092FC6C /* Rubik-Medium.ttf in Resources */,
+				DC8FC77523440BB6003DBA2D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -778,7 +782,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.cotemig.TodoList;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.leonardo.fluo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -797,7 +801,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.cotemig.TodoList;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.leonardo.fluo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

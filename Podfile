@@ -10,6 +10,8 @@ target 'TodoList' do
   pod 'Alamofire', '~> 5.0.0-beta.6'
   pod 'IQKeyboardManagerSwift'
   pod 'SQLite.swift', '~> 0.12.0'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Messaging'
 
   target 'TodoListTests' do
     inherit! :search_paths
